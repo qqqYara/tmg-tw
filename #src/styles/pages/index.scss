@@ -1,0 +1,313 @@
+/* --------------------------------------------------------------------------
+ * >>> sign up Page :
+ * -------------------------------------------------------------------------- */
+.logo-main {
+  width: 120px;
+  margin-bottom: 20px;
+  @include sm-up {
+    width: unset;
+    margin-bottom: 40px;
+  }
+}
+
+h1 {
+  max-width: 650px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #E0E0E0;
+  text-align: center;  
+  margin-bottom: 20px;
+
+  @include sm-up {
+    font-size: 62px;
+    line-height: 73px;
+    margin-bottom: 40px;
+  }
+  span {
+    color: #6CEEC7;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 23px;
+  color: #E0E0E0;
+  text-align: center;  
+  margin-bottom: 30px;
+
+  @include sm-up {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 55px;
+  }
+  span {
+    color: #6CEEC7;
+  }
+
+}
+
+.figure-1 {
+  position: absolute;
+  width: 86px;
+  height: 122px;
+  @include sm-up {
+    width: unset;
+    height: unset;
+  }
+}
+.figure-2 {
+  position: absolute;
+  width: 99px;
+  height: 78px;
+  @include sm-up {
+    width: unset;
+    height: unset;
+  }
+}
+.figure-3 {
+  position: absolute;
+  width: 93px;
+  height: 93px;
+  @include sm-up {
+    width: unset;
+    height: unset;
+  }
+}
+
+.first-screen__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  padding: 15px;
+  overflow: hidden;
+
+  .figure-1 {
+    top: 8px;
+    left: -27px;
+
+    @include sm-up {
+      top: -46px;
+      right: 30%;
+      left: unset;
+    }
+  }
+  .figure-2 {
+      top: 27%;
+      right: -32px;
+
+    @include sm-up {
+      top: 27%;
+      left: -52px;
+      right: unset;
+    }
+  }
+  .figure-3 {
+      bottom: 39px;
+      left: -15px;
+
+    @include sm-up {
+      bottom: 45px;
+      right: -45px;
+      left: unset;
+    }
+  }
+}
+
+.sign-up__section {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  padding: 100px 15px 55px;
+  overflow: hidden;
+
+  @include sm-up {
+    padding-bottom: 30px;
+  }
+
+  @include md-up {
+    height: 100vh;
+  }
+
+
+  .figure-1 {
+    top: 113px;
+    left: -19px;
+    width: 60px;
+    height: 84px;
+
+    @include sm-up {
+      top: 42%;
+      left: -30px;
+      width: unset;
+      height: unset;
+    }
+  }
+  .figure-2 {
+    top: 0;
+    right: -14px;
+
+    @include sm-up {
+      top: 15%;
+      right: -65px;
+    }
+  }
+
+  .figure-3 {
+      right: -34px;
+      bottom: -24px;
+
+    @include sm-up {
+      right: 22%;
+      bottom: -30px;
+    }
+  }
+
+}
+.window__form {
+  max-width: 630px;
+}
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include md-up {
+      width: 48%;
+    }
+
+    .input-ico {
+      position: absolute;
+      top: 17px;
+      left: 18px;
+    }
+  }
+  .input-item {
+    width: 100%;
+    height: 56px;
+    background: transparent;
+    padding-left: 50px;
+    padding-top: 11px; 
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    color: #E0E0E0;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #67D9B7;
+    }
+    & ~ span {
+      position: absolute;
+      top: 17px;
+      left: 50px;
+      font-weight: 300;
+      font-size: 19px;
+      line-height: 23px;
+      color: #E0E0E0;
+      transition: $fastAnim;
+      z-index: 0;
+      @include md-up {
+        z-index: -1;
+      }
+    }    
+    &:focus ~ span,
+    &.has-value ~ span {
+      top: 11px;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+      color: #67D9B7;
+    }
+    & + label {
+      position: absolute;
+      bottom: -15px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      color: #DA5050;
+      text-align: right;
+    }
+    option {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 150%;
+      color: #5E5E5E;
+      margin-bottom: 6px;
+    }
+  }
+  .checkbox-row {
+    align-items: center;
+  }
+  .check-box {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1px solid #6CEEC7;
+    border-radius: 3px;
+    transition: $fastAnim;
+    margin-right: 11px;
+    cursor: pointer;
+
+    &:hover {
+      background: #6CEEC7;
+    }
+    &:checked {
+      background: url('../images/icons/check_icon.svg') top no-repeat;
+    }
+    &.error {
+      background: #DA5050;
+      border: 1px solid #DA5050;
+    }
+
+    & ~ label.check-box_label {
+      height: 18px;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 18px;
+      color: #E0E0E0;
+
+      a {
+        color: #6CEEC7;
+        cursor: pointer;
+        border-bottom: 1px solid #FFFFFF;
+      }
+    }
+  }
+}
+.login-link {
+  position: absolute;
+  bottom: 55px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #E0E0E0;
+  // margin-top: auto;
+
+  @include sm-up {
+    bottom: 30px;
+  }
+
+
+  a {
+    color: #6CEEC7;
+    cursor: pointer;
+  }
+}
